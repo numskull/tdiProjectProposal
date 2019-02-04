@@ -34,7 +34,7 @@ if not os.path.isfile("lang_filter_reduced.csv"):
     lang = data[['tweet_language']]
     langIndex = data.loc[data.tweet_language == 'en']
     #langIndex.to_csv("lang_filter_2.csv", sep=',')
-    langIndex.to_csv("lang_filter_reduced.csv", sep=',', columns=["userid", "user_screen_name", "tweet_text", "retweeted_userid"])
+    langIndex.to_csv("lang_filter_reduced.csv", sep=',')
     print(langIndex[1:10])
 elif not os.path.isfile("terms.csv"):
     data = pd.read_csv("lang_filter_reduced.csv", encoding="latin")
